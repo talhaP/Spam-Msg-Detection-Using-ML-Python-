@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spam Message Detection</title>
+    <style>
+        body {
+            background-color: burlywood;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #D6D4A0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #DA7635;
+;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #495057;
+            font-size: 22px;
+        }
+
+        textarea {
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #DB995A;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Message Detection</h1>
+        <form action="/predict" method="post">
+            <label >Enter Message:</label>
+            <textarea name="message" id="message" placeholder="Type your message here..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+        <a href="/">Go back to home</a>
+    </div>
+</body>
+</html>

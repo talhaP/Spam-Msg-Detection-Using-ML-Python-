@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spam Message Detection - Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color:burlywood;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow:0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .result-ham {
+            color: #28a745; /* Green color for 'ham' */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .result-spam {
+            color: #dc3545; /* Red color for 'spam' */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            color: #dc3545;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Message Detection - Result</h1>
+        {% if prediction[0] == 'ham' %}
+            <p class="result-ham">Prediction: {{ prediction[0] }}</p>
+        {% else %}
+            <p class="result-spam">Prediction: {{ prediction[0] }}</p>
+        {% endif %}
+        <a href="/">Go back to home</a>
+    </div>
+</body>
+</html>
